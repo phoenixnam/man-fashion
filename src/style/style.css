@@ -75,7 +75,7 @@ button.normal{
 .header .navbar{
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .header .navbar li{
@@ -90,6 +90,11 @@ button.normal{
     font-weight: 600;
     color: #1a1a1a;
     transition: .3s ease;
+}
+
+#mobile{
+    display: none;
+    align-items: center;
 }
 
 .header .navbar li a:hover,
@@ -384,7 +389,7 @@ button.green:hover{
 #banner3{
     display: grid;
     grid-template-columns:  repeat(auto-fit, minmax(360px, 1fr));
-    padding: 20px 80px 0 100px;
+    padding: 20px 80px 20px 100px;
 }
 
 #banner3 .banner-box{
@@ -418,4 +423,209 @@ button.green:hover{
 
 #banner3 .banner-box3{
     background-image: url("../img/banner/b18.jpg")
+}
+
+#newsletter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url("../img/banner/b14.png");
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: #041e42;
+    padding: 60px 100px 0 100px; 
+}
+
+#newsletter .newstext h4{
+color: #ffff;
+font-size: 22px;
+font-weight: 700;
+}
+
+#newsletter .newstext p{
+    color: #818ea0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#newsletter .newstext p span{
+    color: #ffbd27;
+}
+
+button.signup{
+    font-size: 13px;
+    padding: 11px 18px;
+    font-weight: 600;
+    color: #000;
+    background-color: #088178;
+    cursor: pointer;
+    border: 1px solid white;
+    transition: .2s;
+    color: #fff
+}
+
+button.signup:hover{
+    background-color: #fff;
+    color: #088178 
+}
+
+#newsletter .form input{
+    border: none;
+    padding: 11px 18px;
+}
+
+
+.footer{
+    background-color: #fff;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 10px
+}
+
+.footer .box-container .box h3{
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.footer .box-container .box h3 i{
+    color: #ffbd27
+}
+
+.footer .box-container .box .links{
+    display: block;
+    font-size: 16px;
+    color: var(--light-color);
+    padding: 10px;
+    text-decoration: none;
+}
+
+.footer .box-container .box .links i{
+    color: #088178;
+    padding-right: 4px;
+}
+
+.footer .box-container .box p{
+    light-height: 1.8;
+    font-size: 16px;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box .share {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+.footer .box-container .box .share a {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex: 0 0 auto;
+    height: 35px;
+    width: 40px;
+    border-radius: 4px;
+    font-size: 20px;
+    color: #eee;
+    margin-left: 3px;
+    background-color: #eee;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.footer .box-container .box .share a:not(:last-child) {
+    margin-right: 10px; 
+}
+
+.footer .box-container .box .links:hover i{
+    padding-right: 10px;
+}
+
+
+.footer .box-container .box .share a:hover {
+    background-color: #ffbd27;
+    color: #fff;
+}
+
+.footer .box-container .box .email{
+    border: none;
+    margin: .7rem 0;
+    padding: 1rem;
+    background-color: #eee;
+    font-size: 15px;
+    color: #eee;
+    text-transform: none;
+}
+
+.footer .box-container .box .payment-img{
+    margin-top: 4px;
+    height: 20px;
+}
+
+.footer .credit{
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    padding-top: 1rem;
+    font-size: 14px;
+    color: #eee;
+    border-top: var(--border)
+}
+
+.footer .credit span{
+    color: #ffbd27
+}
+
+
+
+
+
+/* ... (phần CSS khác) */
+
+/* Định dạng menu điều hướng trên giao diện di động */
+@media (max-width: 714px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 30px; 
+        right: -140%;
+        height: 100vh;
+        width: 200px;
+        background-color: #e3e6f3;
+        box-shadow: 0 40px 64px rgba(0, 0, 0, 0.1);
+        padding: 40px 0 30px 0;
+        transition: .2s linear;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+        padding: 0 20px 0 0;
+    }
+
+    #mobile i {
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #navbar.active {
+        right: 0; /* Hiển thị menu khi có lớp "active" */
+    }
+
+    #close {
+        position: absolute;
+        left: 50%;
+        top: 5px;
+        transform: translateX(-50%); /* Để căn giữa nút "close" */
+        color: #222;
+        font-size: 24px;
+    }
 }
