@@ -96,7 +96,9 @@ button.normal{
     display: none;
     align-items: center;
 }
-
+#close{
+    display: none
+}
 .header .navbar li a:hover,
 .header .navbar li a.active {
     color: #088178;
@@ -282,7 +284,7 @@ button.normal{
     align-items: center;
     background-image: url("../img/banner/b2.jpg");
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     background-size: cover;
     background-position: center;
     color: light
@@ -322,7 +324,7 @@ button.normal{
     justify-content: center;
     align-items: center;
     background-image: url("../img/banner/b17.jpg");
-    width: 48%;
+    width: 100%;
     height: 40vh;
     background-size: cover;
     background-position: center;
@@ -483,7 +485,7 @@ button.signup:hover{
 .footer .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 10px
+    gap: 10px; 
 }
 
 .footer .box-container .box h3{
@@ -589,25 +591,28 @@ button.signup:hover{
 
 /* Định dạng menu điều hướng trên giao diện di động */
 @media (max-width: 714px) {
+    .section-p1{
+        padding: 40px 40px;
+    }
     .navbar {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         position: absolute;
         top: 30px; 
-        right: -140%;
+        right: -100%;
         height: 100vh;
         width: 200px;
         background-color: #e3e6f3;
         box-shadow: 0 40px 64px rgba(0, 0, 0, 0.1);
-        padding: 40px 0 30px 0;
-        transition: .2s linear;
+        padding: 40px 0 60px 0;
+        transition: .4s linear;
     }
 
     #mobile {
         display: flex;
         align-items: center;
-        padding: 0 20px 0 0;
+        padding:  0 0;
     }
 
     #mobile i {
@@ -621,11 +626,60 @@ button.signup:hover{
     }
 
     #close {
+        display: initial;
         position: absolute;
         left: 50%;
         top: 5px;
         transform: translateX(-50%); /* Để căn giữa nút "close" */
         color: #222;
-        font-size: 24px;
+        font-size: 30px;
+    }
+    #lg-bag{
+        display: none;
+    }
+    .hero{
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+    }
+    #feature .fe-box{
+        margin: 15px 0;
+    }
+    #product1{
+        justify-content: center
+    }
+    #sm-banner{
+        height: 40h;
+        display: flex;
+        flex-direction: column;
+        width: 100%
+    }
+    #sm-banner {
+        height: 40vh,
+    }
+    #sm-banner {
+        padding: 10px;
+        padding-right: 25px;
+    }
+
+    #sm-banner .banner-box2 {
+        margin-top: 20px;
+        padding-right: 20px;
+    }
+    #banner3{
+        padding:10px ;
+    }
+    #banner3 .banner-box{
+        width: 95%;
+    }
+
+    #banner3 .banner-box2{
+      margin-top: 20px; 
+    }
+    #banner3 .banner-box3{
+        margin-top: 20px; 
+      }
+      .footer .box-container{
+        text-align: center
     }
 }
